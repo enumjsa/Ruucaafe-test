@@ -19,7 +19,7 @@ public class RuuCaafeTest {
     }
 
     @Test
-    //TU01
+    //TU02
     public void shouldBeInvalidLoginMessage() {
         driver.get("http://ru-cafe.ru/account/login");
         driver.findElement(By.xpath(".//*[@id='ctl00_cphMainPanel_ctl00_ctl00_txtLogin']")).sendKeys("asdasdasd");
@@ -30,7 +30,7 @@ public class RuuCaafeTest {
     }
 
     @Test
-    //TU02
+    //TU01
     public void shouldBeFailedInvalidLoginMessage() {
         driver.get("http://ru-cafe.ru/account/login");
         driver.findElement(By.id("ctl00_cphMainPanel_ctl00_ctl00_txtLogin")).sendKeys("asdasdasd");
@@ -56,7 +56,7 @@ public class RuuCaafeTest {
         driver.get("http://ru-cafe.ru/account/restore");
         driver.findElement(By.xpath(".//*[@id='ctl00_cphMainPanel_txtEmail']")).sendKeys("user@my.com");
         driver.findElement(By.xpath(".//*[@id='ctl00_cphMainPanel_butRestore']")).click();
-        String err = driver.findElement(By.xpath(".//*[@id='ctl00_cphMainPanel_exprEmail']")).getText();
+        String err = driver.findElement(By.xpath(".//*[@id='ctl00_cphMainPanel_cstEmail']")).getText();
         Assert.assertEquals("Пользователь с указанным адресом эл. почты на сайте не зарегистрирован", err);
     }
 
