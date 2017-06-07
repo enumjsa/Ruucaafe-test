@@ -49,7 +49,16 @@ public class RuuCaafeTest {
         String err = driver.findElement(By.xpath(".//*[@id='ctl00_cphMainPanel_exprEmail']")).getText();
         Assert.assertEquals("Введено неверное значение", err);
     }
-
+    
+    @Test
+    //TU04
+    public void shouldBeInvalidRestoreMessage() {
+        driver.get("http://ru-cafe.ru/account/restore");
+        driver.findElement(By.xpath(".//*[@id='ctl00_cphMainPanel_txtEmail']")).sendKeys("user@my.com");
+        driver.findElement(By.xpath(".//*[@id='ctl00_cphMainPanel_butRestore']")).click();
+        String err = driver.findElement(By.xpath(".//*[@id='ctl00_cphMainPanel_exprEmail']")).getText();
+        Assert.assertEquals("Пользователь с указанным адресом эл. почты на сайте не зарегистрирован", err);
+    }
 
     @AfterTest
     public void tearDown() throws Exception {
