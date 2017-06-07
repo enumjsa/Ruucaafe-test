@@ -19,6 +19,7 @@ public class RuuCaafeTest {
     }
 
     @Test
+    //TU01
     public void shouldBeInvalidLoginMessage() {
         driver.get("http://ru-cafe.ru/account/login");
         driver.findElement(By.xpath(".//*[@id='ctl00_cphMainPanel_ctl00_ctl00_txtLogin']")).sendKeys("asdasdasd");
@@ -29,6 +30,7 @@ public class RuuCaafeTest {
     }
 
     @Test
+    //TU02
     public void shouldBeFailedInvalidLoginMessage() {
         driver.get("http://ru-cafe.ru/account/login");
         driver.findElement(By.id("ctl00_cphMainPanel_ctl00_ctl00_txtLogin")).sendKeys("asdasdasd");
@@ -40,6 +42,7 @@ public class RuuCaafeTest {
     }
 
     @Test
+    //TU03
     public void shouldBeInvalidRestoreMessage() {
         driver.get("http://ru-cafe.ru/account/restore");
         driver.findElement(By.xpath(".//*[@id='ctl00_cphMainPanel_txtEmail']")).sendKeys("user");
