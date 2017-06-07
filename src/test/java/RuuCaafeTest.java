@@ -38,7 +38,6 @@ public class RuuCaafeTest {
         driver.findElement(By.id("ctl00_cphMainPanel_ctl00_ctl00_butLogin")).click();
         String err = driver.findElement(By.xpath("//form[@id='aspnetForm']/div[3]/div/div/div/fieldset/div")).getText();
         Assert.assertEquals("Вход не удался", err);
-
     }
 
     @Test
