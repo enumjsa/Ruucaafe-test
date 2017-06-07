@@ -52,7 +52,7 @@ public class RuuCaafeTest {
     
     @Test
     //TU04
-    public void shouldBeInvalidRestoreMessage() {
+    public void shouldBeInvalidRestoreMessageEmail() {
         driver.get("http://ru-cafe.ru/account/restore");
         driver.findElement(By.xpath(".//*[@id='ctl00_cphMainPanel_txtEmail']")).sendKeys("user@my.com");
         driver.findElement(By.xpath(".//*[@id='ctl00_cphMainPanel_butRestore']")).click();
