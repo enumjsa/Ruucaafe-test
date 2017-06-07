@@ -19,15 +19,6 @@ public class RuuCaafeTest {
     }
 
     @Test
-    public void titleNameIsCorrect() {
-        driver.get("http://ru-cafe.ru/");
-        String title = driver.getTitle();
-        Assert.assertEquals("Круглосуточный копировальный центр в Москве. Оперативная полиграфия.", title);
-
-    }
-
-
-    @Test
     public void shouldBeInvalidLoginMessage() {
         driver.get("http://ru-cafe.ru/account/login");
         driver.findElement(By.xpath(".//*[@id='ctl00_cphMainPanel_ctl00_ctl00_txtLogin']")).sendKeys("asdasdasd");
